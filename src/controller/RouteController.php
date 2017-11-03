@@ -16,19 +16,19 @@ class RouteController implements RouteControllerInterface
 
     public function getMainInfo()
     {
-        $page = $this->viewModel->getPage('index');
+        $page = $this->viewModel->getPageWithoutData('index');
         return new Response($page);
     }
 
     public function getNewsInfo()
     {
-        $page = $this->viewModel->getPage('news');
+        $page = $this->viewModel->getPageWithoutData('news');
         return new Response($page);
     }
 
     public function getAdminPage()
     {
-        $page = $this->viewModel->getPage('admin');
+        $page = $this->viewModel->getPage('admin', ['name' => 'user']);
         return new Response($page);
     }
 }

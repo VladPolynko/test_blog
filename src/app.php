@@ -1,4 +1,7 @@
 <?php
+
+namespace Tests\AppBundle\Util;
+
 use Symfony\Component\Routing;
 use vlog\controller\RouteController;
 
