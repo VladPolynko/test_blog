@@ -16,12 +16,7 @@ class ViewModel implements ViewModelInterface
         $this->twig   = new Twig_Environment($this->loader);
     }
     
-    public function getPageWithoutData(string $pageName)
-    {
-        return $this->twig->render($pageName.'.html');
-    }
-    
-    public function getPage(string $pageName, array $pageData)
+    public function getPage(string $pageName, array $pageData = [])
     {
         return $this->twig->render($pageName.'.html', $pageData);
     }
